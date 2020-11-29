@@ -29,7 +29,11 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list.destroy
+    if @list.destroy
+      render json: {success:['Deleted.'], status: :ok}
+    else
+      render json: {errors:['Not able to delete list.'], status: :unprocessable_entity}
+    end
   end
 
   def get_tasks

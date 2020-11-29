@@ -27,7 +27,11 @@ class TemplatesController < ApplicationController
   end
 
   def destroy
-    @template.destroy
+    if @template.destroy
+      render json: {success:['Deleted.'], status: :ok}
+    else
+      render json: {errors:['Not able to delete template.'], status: :unprocessable_entity}
+    end
   end
 
   def search_by_title

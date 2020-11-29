@@ -27,7 +27,11 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task.destroy
+    if @task.destroy
+      render json: {success:['Deleted.'], status: :ok}
+    else
+      render json: {errors:['Not able to delete task.'], status: :unprocessable_entity}
+    end
   end
 
   def set_task_status
