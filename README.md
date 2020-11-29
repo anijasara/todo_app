@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple backend rails application which can be used to create your own templates having lists which includes multiple tasks.
+You can create various lists and add tasks in it and also modify if required.
 
-Things you may want to cover:
+Pushed the working application into Heroku, URL : https://quiet-tundra-00404.herokuapp.com/
 
-* Ruby version
+ Ruby version  - 2.6.3
+ Rails version - 5.2.4
 
-* System dependencies
+Manual
 
-* Configuration
+* Clone the repository
+* Install gems with bundle install
+* Create local database in postgres - rails db:create
+* Run migrations - rails db:migrate
+* Run rails server in terminal
 
-* Database creation
+* To run unit tests:
 
-* Database initialization
+**  bundle exec rspec -> Included all possible model specs & request specs
 
-* How to run the test suite
+* Have added complete API documentation here : https://docs.google.com/document/d/18ZYFaa-TbFP_Xa-vGB_Fqkg_rS0LCW8dlj_WxJ-hR-Q/edit
 
-* Services (job queues, cache servers, search engines, etc.)
+* Have used heroku as deployment tool.
 
-* Deployment instructions
+Cheers!
 
-* ...
