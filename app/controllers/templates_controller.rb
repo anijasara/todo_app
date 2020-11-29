@@ -1,4 +1,4 @@
-class TemplatesController < ApplicationController
+class TemplatesController < AuthenticationController
   before_action :set_template, only: [:show, :update, :destroy]
 
   def index
