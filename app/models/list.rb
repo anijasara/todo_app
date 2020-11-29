@@ -1,5 +1,5 @@
 class List < ApplicationRecord
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
   has_many :template_lists
   has_many :templates, :through => :template_lists
 
