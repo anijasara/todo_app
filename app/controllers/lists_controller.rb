@@ -1,4 +1,4 @@
-class ListsController < ApplicationController
+class ListsController < AuthenticationController
 
   before_action :set_list, only: [:show, :update, :destroy, :get_tasks, :remove_tasks]
 

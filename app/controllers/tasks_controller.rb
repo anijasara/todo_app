@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+class TasksController < AuthenticationController
   before_action :set_task, only: [:show, :update, :destroy, :set_task_status]
 
   def index
